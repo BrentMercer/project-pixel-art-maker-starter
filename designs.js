@@ -8,7 +8,7 @@ function makeGrid() {
 		// Inserts rows into the table
 		const row = table.insertRow(i);
 		for (let j = 0; j < inputWidth; j++) {
-			// Inserts 10 cells into each of the rows
+			// Inserts cells into each of the rows
 			const cell = row.insertCell(j);
 			cell.addEventListener('click', function(evt) { 
 				let color = $('#colorPicker').val();

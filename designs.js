@@ -1,30 +1,25 @@
-// Select color input
-// Select size input
-
 // Take selected height and width, build table, then insert to pixel_canvas
 function makeGrid() {
-	let table;
-	let inputWidth = $('#input_width').val();
-	let inputHeight = $('#input_height').val();
-	let pixelCanvas = $('#pixel_canvas');
+	const inputWidth = $('#input_width').val();
+	const inputHeight = $('#input_height').val();
+	const table = document.getElementById('pixel_canvas');
+
 	for (let i = 0; i < inputHeight; i++) {
-		table += "<tr>";
+		// Inserts rows into the table
+		const row = table.insertRow(i);
 		for (let j = 0; j < inputWidth; j++) {
-			table += "<td></td>";
+			// Inserts 10 cells into each of the rows
+			const cell = row.insertCell(j);
+			cell.addEventListener('click', function(evt) { 
+				let color = $('#colorPicker').val();
+				$(evt.target).css('background-color', color);
+			})
 		}
-		table += "</tr>";
 	}
-	pixelCanvas.html(table);
 }
 
-// Listen for Submit button click and call makeGrid()
-$('#sizePicker').click(function(evt) {
+// Listen for Submit button to call makeGrid()
+$('#sizePicker').submit(function(evt) {
 	evt.preventDefault();
 	makeGrid();
-})
-
-// Listen for click in cell and apply selected color
-$('#pixel_canvas').click(function(evt) {
-	let color = $('#colorPicker').val();
-	$(evt.target).css('background-color', color);
 })

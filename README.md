@@ -7,10 +7,12 @@
 
 ## Instructions
 
-To get started, open `designs.js` and start building out the app's functionality.
+To use the Pixel Painer, simply enter values for Height and Width in the input fields, then click Submit Query. This will build the pixel paint board.
 
-For specific, detailed instructions, look at the project instructions in the [Udacity Classroom](https://classroom.udacity.com/me).
+Next, choose the color poicker under the headline Pick a Color. Change the colors and hues until you have a color you like, then close the color picker.
+
+Finally, click within the cells of your paint board to paint that cell with your selected color. Feel free to change colors whenever you like and paint over cells previously painted.
 
 ## Contributing
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+Feel free to contribubte to this project in any way you want. Pull requests are processed regularly.
